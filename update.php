@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
   
   $nama = $_POST['nama'];
   $angkatan = $_POST['angkatan'];
-  $nomor_hp = $_POST['nomor_hp'];
+  $nomor_hp = $_POST['no_hp'];
   $email = $_POST['email'];
 
   $sql = "UPDATE alumni_et SET angkatan = '$angkatan', nomor_hp = '$nomor_hp', email='$email' WHERE nama = '$nama'";

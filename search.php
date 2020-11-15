@@ -3,7 +3,7 @@ require_once('connection.php');
 if($_SERVER['REQUEST_METHOD']=='POST') {
 
   $search = $_POST['search'];
-  $sql = "SELECT * FROM alumni_et where nama LIKE '%$search%' ORDER BY nama ASC";
+  $sql = "SELECT * FROM alumni_et where nama LIKE '%$search%' OR angkatan LIKE '%$search%' ORDER BY nama ASC";
   $res = mysqli_query($con,$sql);
   $result = array();
   while($row = mysqli_fetch_array($res)){
